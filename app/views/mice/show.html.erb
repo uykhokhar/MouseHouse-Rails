@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Strain:</b>
+  <%= @mouse.strain %>
+</p>
+
+<p>
+  <b>Ear tag:</b>
+  <%= @mouse.ear_tag %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @mouse.gender %>
+</p>
+
+<p>
+  <b>Genotype:</b>
+  <%= @mouse.genotype %>
+</p>
+
+<p>
+  <b>Date of birth:</b>
+  <%= @mouse.date_of_birth %>
+</p>
+
+<p>
+  <b>Litter:</b>
+  <%= @mouse.litter_id %>
+</p>
+
+<p>
+  <b>Cage:</b>
+  <%= @mouse.cage_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_mouse_path(@mouse) %> |
+<%= link_to 'Back', mice_path %>

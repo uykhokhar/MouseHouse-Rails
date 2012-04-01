@@ -1,0 +1,25 @@
+<h1>Listing breeding_pairs</h1>
+
+<table>
+  <tr>
+    <th>Sire</th>
+    <th>Dam</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @breeding_pairs.each do |breeding_pair| %>
+  <tr>
+    <td><%= breeding_pair.sire_id %></td>
+    <td><%= breeding_pair.dam_id %></td>
+    <td><%= link_to 'Show', breeding_pair %></td>
+    <td><%= link_to 'Edit', edit_breeding_pair_path(breeding_pair) %></td>
+    <td><%= link_to 'Destroy', breeding_pair, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Breeding pair', new_breeding_pair_path %>

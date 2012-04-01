@@ -1,0 +1,45 @@
+<%= form_for(@mouse) do |f| %>
+  <% if @mouse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mouse.errors.count, "error") %> prohibited this mouse from being saved:</h2>
+
+      <ul>
+      <% @mouse.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :strain %><br />
+    <%= f.text_field :strain %>
+  </div>
+  <div class="field">
+    <%= f.label :ear_tag %><br />
+    <%= f.text_field :ear_tag %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :genotype %><br />
+    <%= f.text_field :genotype %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :litter_id %><br />
+    <%= f.number_field :litter_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cage_id %><br />
+    <%= f.number_field :cage_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

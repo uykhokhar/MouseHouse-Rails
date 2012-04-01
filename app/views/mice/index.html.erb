@@ -1,0 +1,35 @@
+<h1>Listing mice</h1>
+
+<table>
+  <tr>
+    <th>Strain</th>
+    <th>Ear tag</th>
+    <th>Gender</th>
+    <th>Genotype</th>
+    <th>Date of birth</th>
+    <th>Litter</th>
+    <th>Cage</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mice.each do |mouse| %>
+  <tr>
+    <td><%= mouse.strain %></td>
+    <td><%= mouse.ear_tag %></td>
+    <td><%= mouse.gender %></td>
+    <td><%= mouse.genotype %></td>
+    <td><%= mouse.date_of_birth %></td>
+    <td><%= mouse.litter_id %></td>
+    <td><%= mouse.cage_id %></td>
+    <td><%= link_to 'Show', mouse %></td>
+    <td><%= link_to 'Edit', edit_mouse_path(mouse) %></td>
+    <td><%= link_to 'Destroy', mouse, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mouse', new_mouse_path %>

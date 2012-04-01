@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Label:</b>
+  <%= @cage.label %>
+</p>
+
+<p>
+  <b>Protocol:</b>
+  <%= @cage.protocol_id %>
+</p>
+
+<p>
+  <b>Mouse rack:</b>
+  <%= @cage.mouse_rack_id %>
+</p>
+
+<p>
+  <b>Row:</b>
+  <%= @cage.row %>
+</p>
+
+<p>
+  <b>Column:</b>
+  <%= @cage.column %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @cage.user_id %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @cage.created_at %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= @cage.created_by %>
+</p>
+
+<p>
+  <b>Modified on:</b>
+  <%= @cage.modified_on %>
+</p>
+
+<p>
+  <b>Bodified by:</b>
+  <%= @cage.bodified_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_cage_path(@cage) %> |
+<%= link_to 'Back', cages_path %>

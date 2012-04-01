@@ -1,0 +1,41 @@
+<h1>Listing cages</h1>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Protocol</th>
+    <th>Mouse rack</th>
+    <th>Row</th>
+    <th>Column</th>
+    <th>User</th>
+    <th>Created at</th>
+    <th>Created by</th>
+    <th>Modified on</th>
+    <th>Bodified by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cages.each do |cage| %>
+  <tr>
+    <td><%= cage.label %></td>
+    <td><%= cage.protocol_id %></td>
+    <td><%= cage.mouse_rack_id %></td>
+    <td><%= cage.row %></td>
+    <td><%= cage.column %></td>
+    <td><%= cage.user_id %></td>
+    <td><%= cage.created_at %></td>
+    <td><%= cage.created_by %></td>
+    <td><%= cage.modified_on %></td>
+    <td><%= cage.bodified_by %></td>
+    <td><%= link_to 'Show', cage %></td>
+    <td><%= link_to 'Edit', edit_cage_path(cage) %></td>
+    <td><%= link_to 'Destroy', cage, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cage', new_cage_path %>

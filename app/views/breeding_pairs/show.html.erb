@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sire:</b>
+  <%= @breeding_pair.sire_id %>
+</p>
+
+<p>
+  <b>Dam:</b>
+  <%= @breeding_pair.dam_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_breeding_pair_path(@breeding_pair) %> |
+<%= link_to 'Back', breeding_pairs_path %>

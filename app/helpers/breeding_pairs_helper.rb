@@ -1,0 +1,2 @@
+module BreedingPairsHelper
+end

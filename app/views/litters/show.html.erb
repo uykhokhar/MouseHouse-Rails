@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Breeding pair:</b>
+  <%= @litter.breeding_pair_id %>
+</p>
+
+<p>
+  <b>Date of birth:</b>
+  <%= @litter.date_of_birth %>
+</p>
+
+
+<%= link_to 'Edit', edit_litter_path(@litter) %> |
+<%= link_to 'Back', litters_path %>

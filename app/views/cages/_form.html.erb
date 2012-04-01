@@ -1,0 +1,57 @@
+<%= form_for(@cage) do |f| %>
+  <% if @cage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cage.errors.count, "error") %> prohibited this cage from being saved:</h2>
+
+      <ul>
+      <% @cage.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :label %><br />
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :protocol_id %><br />
+    <%= f.number_field :protocol_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mouse_rack_id %><br />
+    <%= f.number_field :mouse_rack_id %>
+  </div>
+  <div class="field">
+    <%= f.label :row %><br />
+    <%= f.number_field :row %>
+  </div>
+  <div class="field">
+    <%= f.label :column %><br />
+    <%= f.number_field :column %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.time_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br />
+    <%= f.number_field :created_by %>
+  </div>
+  <div class="field">
+    <%= f.label :modified_on %><br />
+    <%= f.time_select :modified_on %>
+  </div>
+  <div class="field">
+    <%= f.label :bodified_by %><br />
+    <%= f.number_field :bodified_by %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

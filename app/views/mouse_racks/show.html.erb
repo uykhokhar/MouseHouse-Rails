@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Room:</b>
+  <%= @mouse_rack.room_id %>
+</p>
+
+<p>
+  <b>Label:</b>
+  <%= @mouse_rack.label %>
+</p>
+
+
+<%= link_to 'Edit', edit_mouse_rack_path(@mouse_rack) %> |
+<%= link_to 'Back', mouse_racks_path %>
