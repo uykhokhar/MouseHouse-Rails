@@ -53,5 +53,6 @@ class User
   attr_accessible :name, :email, :password, :remember_me, :confirmed_at
   
   has_many :cages
+  has_many :mouse_racks
 end
 
