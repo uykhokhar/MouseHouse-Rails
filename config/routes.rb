@@ -26,6 +26,7 @@ MousehouseRails::Application.routes.draw do
       match 'sign_out' => 'tokens#destroy', :via => :post
       #resources :tokens, :only => [:create, :destroy]
       resources :cages
+      resources :mouse_racks
     end
   end
   
