@@ -4,7 +4,6 @@ class MouseRack
   field :label, :type => String
   field :columns, :type => Integer
   field :rows, :type => Integer
-  field :user_id => Integer
   
   belongs_to :user    
 end

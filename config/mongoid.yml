@@ -1,6 +1,9 @@
 development:
-  host: localhost
-  database: mousehouse_rails_development
+  host: 'flame.mongohq.com'
+  port: '27108'
+  username: 'mousehouse'
+  password: 'mousehouse'
+  database: 'app3464023'
 
 test:
   host: localhost
