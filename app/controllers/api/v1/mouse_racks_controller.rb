@@ -23,8 +23,8 @@ class Api::V1::MouseRacksController < Api::V1::ApiController
   # POST /mouse_racks
   # POST /mouse_racks.json
   def create
-    @mouse_rack = @mouse_racks.new(params[:mouse_rack])
-
+    @mouse_rack = MouseRack.new(params[:mouse_rack])
+    @mouse_rack.user_id = current_user.id
     respond_to do |format|
       if @mouse_rack.save
         format.json { render json: @mouse_rack, status: :created }
