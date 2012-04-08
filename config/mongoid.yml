@@ -1,4 +1,4 @@
-development:
+production:
   host: 'flame.mongohq.com'
   port: '27108'
   username: 'mousehouse'
@@ -11,11 +11,12 @@ test:
 
 # set these environment variables on your prod server
 production:
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
+  uri: <%= ENV['MONGOID_URL'] %>
+  #host: <%= ENV['MONGOID_HOST'] %>
+  #port: <%= ENV['MONGOID_PORT'] %>
+  #username: <%= ENV['MONGOID_USERNAME'] %>
+  #password: <%= ENV['MONGOID_PASSWORD'] %>
+  #database: <%= ENV['MONGOID_DATABASE'] %>
   # slaves:
   #   - host: slave1.local
   #     port: 27018
