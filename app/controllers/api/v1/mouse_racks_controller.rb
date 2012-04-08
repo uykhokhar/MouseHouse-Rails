@@ -59,6 +59,6 @@ class Api::V1::MouseRacksController < Api::V1::ApiController
   end
   protected
     def set_mouse_racks
-      @mouse_racks = current_user.mouse_racks
+      @mouse_racks = current_user.mouse_racks.order_by([:label, :asc])
     end
 end
