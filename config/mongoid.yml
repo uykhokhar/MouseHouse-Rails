@@ -1,4 +1,4 @@
-production:
+development:
   host: 'flame.mongohq.com'
   port: '27108'
   username: 'mousehouse'
@@ -12,10 +12,10 @@ test:
 # set these environment variables on your prod server
 production:
     host: flame.mongohq.com
-      port: 27108
-      username: heroku
-      password: 82e542004a63df180ad93ce42646d0e6
-      database: app3464023
+    port: 27108
+    username: heroku
+    password: 82e542004a63df180ad93ce42646d0e6
+    database: app3464023
   #uri: <%= ENV['MONGOID_URL'] %>
   #host: <%= ENV['MONGOID_HOST'] %>
   #port: <%= ENV['MONGOID_PORT'] %>
